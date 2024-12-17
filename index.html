@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Do</title>
+  </head>
+  <body>
+    <nav class="nav-bar py-5">
+      <nav class="navbar navbar-expand-lg navbar-light py-0">
+        <div class="container p-0">
+          <a
+            class="navbar-brand m-0 py-0 d-flex align-items-center justify-content-between"
+            href="#"
+          >
+            <img src="images/logo.png" alt="Weather" />
+            <div
+              class="logo-title d-flex flex-column justify-content-between align-items-start py-0"
+            >
+              <h1 class="mb-1 nav-logo fs-6 fw-bold text-white">Weather</h1>
+              <span class="nav-logo">tagline goes here</span>
+            </div>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse d-flex justify-content-end align-items-center"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link active text-white px-4"
+                  aria-current="page"
+                  href="#"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white px-4" aria-current="page" href="#"
+                  >News</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white px-4" aria-current="page" href="#"
+                  >Live Cameras</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white px-4" aria-current="page" href="#"
+                  >Photos</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white px-4" aria-current="page" href="#"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </nav>
+    <div class="site-content">
+      <div class="hero">
+        <div class="container">
+          <form id="form" class="find-location position-relative">
+            <input
+              class="text-white fs-6"
+              type="text"
+              placeholder="Find your location..."
+              id="search"
+            />
+          </form>
+        </div>
+      </div>
+      <div class="forecast-table">
+        <div class="container">
+          <div class="forecast-container row" id="forecast">
+            <div class="col-md-4 today px-0">
+              <div
+                class="header d-flex justify-content-between align-items-center"
+              >
+                <div id="dayName" class="day">monday</div>
+                <div id="date">
+                  <span id="dayNumber">16</span>
+                  <span id="todayMonth">decsmber</span>
+                </div>
+              </div>
+              <div class="forecast-content">
+                <div id="todayLocation" class="location">Cairo</div>
+                <div
+                  class="degree d-flex align-items-center justify-content-between"
+                >
+                  <div id="todayTemp" class="num text-white">19.3</div>
+                  <div class="text-white fw-bold fs-2"><sup>o</sup>C</div>
+                  <div class="forecast-icon">
+                    <img
+                      id="todayIcon"
+                      src="https://cdn.weatherapi.com/weather/64x64/night/113.png"
+                      alt=""
+                      width="90"
+                    />
+                  </div>
+                </div>
+                <div id="todayText" class="custom">Clear</div>
+                <span
+                  ><img src="images/icon-umberella.png" alt="" /><span
+                    id="todayImg1"
+                    >20%</span
+                  ></span
+                >
+                <span
+                  ><img src="images/icon-wind.png" alt="" /><span id="todayImg2"
+                    >18km/h</span
+                  ></span
+                >
+                <span
+                  ><img src="images/icon-compass.png" alt="" /><span
+                    id="todayImg3"
+                    >East</span
+                  ></span
+                >
+              </div>
+            </div>
+            <div class="col-md-4 forecast forecast-2 px-0">
+              <div class="forecast-header rounded-0 header-2">
+                <div id="tomorrowDay" class="day text-center">Tuesday</div>
+              </div>
+              <div
+                class="forecast-content d-flex flex-column justify-content-between align-items-center"
+              >
+                <div class="forecast-icon">
+                  <img
+                    id="tomorrowIcon"
+                    src="https://cdn.weatherapi.com/weather/64x64/day/113.png"
+                    alt=""
+                    width="48"
+                  />
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div id="tomorrowMaxTemp" class="degree text-white">22.1</div>
+                  <div class="text-white"><sup>o</sup>C</div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="text-white fs-4" id="tomorrowMinTemp">13.1</div>
+                  <sup class="text-white">o</sup>
+                </div>
+                <div id="tomorrowText" class="custom">Sunny</div>
+              </div>
+            </div>
+            <div class="col-md-4 forecast forecast-3 px-0">
+              <div class="forecast-header">
+                <div id="day3Day" class="day text-center">Wednesday</div>
+              </div>
+              <div
+                class="forecast-content content-3 d-flex flex-column justify-content-between align-items-center"
+              >
+                <div class="forecast-icon">
+                  <img
+                    id="day3Icon"
+                    src="https://cdn.weatherapi.com/weather/64x64/day/113.png"
+                    alt=""
+                    width="48"
+                  />
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div id="day3MaxTemp" class="degree text-white">21.9</div>
+                  <div class="text-white fs-4"><sup>o</sup>C</div>
+                </div>
+               <div class="d-flex justify-content-between align-items-center">
+                <div id="day3MinTemp" class="text-white fs-4">
+                  12.9
+                </div>
+                <sup class="text-white">o</sup>
+               </div>
+                <div id="day3Text" class="custom">Sunny</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="site-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 px-0">
+              <form action="#" class="subscribe-form position-relative">
+                <input
+                  class="text"
+                  type="text"
+                  placeholder="Enter your email to subscribe..."
+                />
+                <input
+                  class="button text-white button-padding"
+                  type="submit"
+                  value="Subscribe"
+                />
+              </form>
+            </div>
+            <div class="col-md-3 offset-1">
+              <div
+                class="social-links d-flex justify-content-center align-items-center"
+              >
+                <a
+                  class="d-flex justify-content-center align-items-center me-1 text-decoration-none"
+                  href="#"
+                  ><i class="fa-brands fa-facebook-f" style="color: #009ad8"></i
+                ></a>
+                <a
+                  class="d-flex justify-content-center align-items-center me-1 text-decoration-none"
+                  href="#"
+                  ><i class="fa-brands fa-twitter" style="color: #009ad8"></i
+                ></a>
+                <a
+                  class="d-flex justify-content-center align-items-center me-1 text-decoration-none"
+                  href="#"
+                  ><i class="fa-brands fa-google" style="color: #009ad8"></i
+                ></a>
+                <a
+                  class="d-flex justify-content-center align-items-center me-1 text-decoration-none"
+                  href="#"
+                  ><i class="fa-brands fa-pinterest" style="color: #009ad8"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <p class="footer-p mt-4 mb-3">
+            Copyright 2014 Company name. Designed by Themezy. All rights
+            reserved
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
